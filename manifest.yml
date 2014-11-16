@@ -2,5 +2,5 @@ applications:
 - name:      stan-stupid
   host:      ai-nursery
   memory:    256M
-  command:   python hello.py
+  command:   python app.py
   buildpack: https://github.com/heroku/heroku-buildpack-python.git
