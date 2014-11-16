@@ -316,9 +316,7 @@ min-height:100%;
 .hi-icon-arrow-right:hover{
 	text-decoration: none;
 }
-.hi-icon-arrow-right:hover ~ .rightColumn img{
-	opacity: 0.3;
-}
+
 /* --- */
 .hi-icon-arrow-left:before {
 	content: "\e609";
@@ -335,14 +333,13 @@ min-height:100%;
 }
 .stanley-please{
 	text-align: center;
-	padding-left: 12%;
-	padding-top: 22%;
+	padding-left: 25%;
+	padding-top: 12%;
 	width:100%;
 }
 
 .stanley-title{
-padding-top: 25%;
-
+padding-top: 10%;
 }
 /*///////////////////////// BUTTON EFFECT /////////////////////////*/
 
