@@ -202,9 +202,7 @@ min-height:100%;
    padding-top: 20px;
    margin-left: -5px;
 }
-.footer-left-icon-small .hi-icon{
-   padding-top: 5px;
-}
+
 
 /*///////////////////////// BUTTONS /////////////////////////*/
 .btn-group {
@@ -480,6 +478,11 @@ p{
 }
 p span{
 
+}
+/*///////////////////////// FORM /////////////////////////*/
+.navbar-form {
+	margin-left: 18%; 
+	margin-top: 12%;
 }
 
 #textInput {
