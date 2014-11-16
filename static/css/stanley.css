@@ -97,6 +97,14 @@ margin-left: 0px;
 	transition: transform 0.5s, margin-left 0.5s ease-in-out;
 
 }
+.leftColumn img{
+	padding-left: 35px;
+	width:auto;
+	height:40%;
+	margin-left:auto;
+	margin-right:auto;
+
+}
 .rightColumn{
    z-index : 0;
   float: right;

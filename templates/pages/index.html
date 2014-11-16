@@ -8,31 +8,27 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
 
+    <!-- Stanley theme -->
+    <link rel="stylesheet" href="public/stylesheets/stanley.css">
+
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>   
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-     <link rel="stylesheet" href="{{ url_for('static', filename= 'css/main.css') }} "/>
-     <link rel="stylesheet" href="{{ url_for('static', filename= 'css/stanley.css') }} "/>
+     <link rel="stylesheet" href="static/css/stanley.css" />
 
     </head>
     <body>
     <div class="container">
         <div class="row">
-            <img src="{{url_for ('static' , filename='img/StanleyBackground.jpeg') }}" class="bg">
             <div class="leftColumn">
-                <!-- <img src="../../static/img/StanleyTransparent.png" alt="Stanley" height="auto" width="200px"  class="thumbnails"/> -->
+                 <img src="static/img/StanleyTransparent.png" alt="Stanley" class="thumbnails"/> 
+                <div class="stanley-title">
                 <h1>WELCOME TO <span>STANLEY !</span></h1>
+            </div>
                 <h2><span>STANLEY</span> is an intelligent app that turns all your movie fantasies into real video teasers.</h2>
                 <div class="footer-left">
                     <h2>Share your creations with your friends on Facebook, Twitter or Google+. Get the code on Github or Contact Us</h2>
-
-                    <!-- <div class="btn-group" role="group" area-label="...">
-                    <button type="button" class="btn btn-default"><img src="../../static/img/Facebook.png" height="50px" width="50px"/></button>
-                    <button type="button" class="btn btn-default"><img src="../../static/img/Twitter.png" height="50px" width="50px"/></button>
-                    <button type="button" class="btn btn-default"><img src="../../static/img/Google.png" height="50px" width="50px"/></button>
-                    </div>   --> 
                     
                     <div class="footer-left-icon">
                     <div class="hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a">   
@@ -40,17 +36,19 @@
                         <a href="#twitter" class="hi-icon hi-icon-twitter">Twitter</a>
                         <a href="#google" class="hi-icon hi-icon-googleplus">Google +</a>
                         <a href="#github" class="hi-icon hi-icon-github">Github</a>
-                        <a href="#contact" class="hi-icon hi-icon-contactus">Contact</a>
+                        <a href="#contact" class="hi-icon hi-icon-mail">Contact</a>
                     </div> 
                 </div>
-                    <!-- <div class="btn-group" role="group" aria-label="...">
-                    <button type="button" class="btn btn-default"><img src="../../static/img/Home.png" height="50px" width="50px"/></button>
-                    <button type="button" class="btn btn-default"><img src="../../static/img/Undo.png" height="50px" width="50px"/></button>
-                    </div>  --> 
                 </div>             
             </div>
             <div class="rightColumn">
-                    <a href="/tell_me_about_your_movie" ><button type="button" class = "btn-group">STANLEY please, make a teaser of my movie !</button></a>
+                <img src="static/img/StanleyBackground.jpeg" class="bg">                
+                </div>
+                <div class="stanley-please">
+                    <div class="hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a">
+                     <a href="tell_me_about_your_movie" class="hi-icon hi-icon-arrow-right">Go</a>
+                     </div>
+                 </div>
             </div>
         </div>
     </div>
