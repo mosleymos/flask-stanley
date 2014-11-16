@@ -1,6 +1,10 @@
 <!DOCTYPE HTML>
 <html>
     <head>
+
+     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+      <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
      <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 
@@ -35,13 +39,23 @@
             </div>
             <div class="rightColumn">
                 <img src="static/img/StanleyBackground.jpeg" class="bg">
-<!--                  <div id="progressbar"></div>
- -->                 <div class="hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a">
+                  <div id="progressbar"></div>
+                 <div class="hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a">
                      <a href="your_trailer" class="hi-icon hi-icon-arrow-right">Go</a>
                      </div>
             </div>
 
         </div>
     </div>
+    <script>
+ timer = 0;
+  $(function() {
+    setInterval(function(){
+    $( "#progressbar" ).progressbar({
+      value: timer+= 0.2
+    });
+}, 10)
+  });
+  </script>
     </body>
 </html>

@@ -433,8 +433,9 @@ padding-top: 10%;
 /*///////////////////////// PROGRESS BAR /////////////////////////*/
 #progressbar {
   background-color: #140e09;
-  border-radius: 0px; /* (height of inner div) / 2 + padding */
-  padding: 3px;
+  width : 50%;
+  height: 20px;
+  margin : 20% auto auto auto;
 }
 #progressbar > div {
    background-color: #cc7231;
