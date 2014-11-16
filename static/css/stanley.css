@@ -484,18 +484,23 @@ p span{
 	margin-left: 18%; 
 	margin-top: 12%;
 }
-
+.navbar-form .hi-icon{
+	margin-left: 1300%; 
+	margin-top: 170%;
+}
 #textInput {
-
+	font-family: 'GreyScaleBasicRegular';
+		color: #140E09;
+    font-size:13px;   
   display : block;
   position:absolute;
-  font-size:28px;
   clear : both;
-  width: 60%;
+  width: 40%;
   height: 30%;
   margin-left : 10%;
   margin-top : 5%;
   resize: none;
+
 }
 
 label {
