@@ -25,6 +25,11 @@ def tell_me_about_your_movie():
 def stanley_is_working():
     return render_template('pages/stanley_is_working.html')
 
+
+@app.route('/your_trailer')
+def your_trailer():
+    return render_template('pages/your_trailer.html')
+
 #-------------------------------------------------------------------------------
 port = os.getenv('VCAP_APP_PORT', '5000')
 if __name__ == "__main__":
