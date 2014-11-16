@@ -433,8 +433,9 @@ padding-top: 10%;
 /*///////////////////////// PROGRESS BAR /////////////////////////*/
 #progressbar {
   background-color: #140e09;
-  border-radius: 0px; /* (height of inner div) / 2 + padding */
-  padding: 3px;
+  width : 50%;
+  height: 20px;
+  margin : 20% auto auto auto;
 }
 #progressbar > div {
    background-color: #cc7231;
@@ -478,6 +479,15 @@ p{
 }
 p span{
 
+}
+/*///////////////////////// VIDEO /////////////////////////*/
+
+video#bgvid {
+position: fixed; right: 0; bottom: 0;
+min-width: 100%; min-height: 100%;
+width: auto; height: auto; z-index: -100;
+background: url(static/img/StanleyBackground.jpeg) no-repeat;
+background-size: cover;
 }
 /*///////////////////////// FORM /////////////////////////*/
 .navbar-form {
