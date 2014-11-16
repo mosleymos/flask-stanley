@@ -105,6 +105,46 @@ margin-left: 0px;
 	margin-right:auto;
 
 }
+.leftColumn-small{
+	z-index : 2;
+  	float : left;
+	font-family:'GreyScaleBasicRegular';
+	position : fixed;
+	margin-left: -5px;
+	top: 0;
+	bottom: 0;
+	left: 0px;
+	width: 10%;
+	
+	padding: 3rem 2rem 2rem ;
+	background-color:rgba(240, 177, 105, 0.85);
+
+}
+.leftColumn-small img{
+	padding-left: 3px;
+	width:auto;
+	height:20%;
+	margin-left:auto;
+	margin-right:auto;
+
+}
+
+.leftColumn-small:hover{
+margin-left: 0px;
+-webkit-transition: -webkit-transform 0.5s, margin-left 0.5s;
+	-moz-transition: -moz-transform 0.5s, margin-left 0.5s;
+	transition: transform 0.5s, margin-left 0.5s;
+}
+.leftColumn-small:before{
+margin-left: -5px;
+}
+.leftColumn-small:after{
+margin-left: 0px;
+-webkit-transition: -webkit-transform 0.5s, margin-left 0.5s ease-in-out;
+	-moz-transition: -moz-transform 0.5s, margin-left 0.5s ease-in-out;
+	transition: transform 0.5s, margin-left 0.5s ease-in-out;
+
+}
 .rightColumn{
    z-index : 0;
   float: right;
@@ -148,8 +188,22 @@ min-height:100%;
    height:200px;
    padding-right: 2rem;
 }
+.footer-left-small{
+	position:absolute;
+   bottom:0;
+   width:100%;
+   height:400px;
+   padding-right: 2rem;
+}
 .footer-left-icon{
    padding-right: 10px;
+}
+.footer-left-icon-small{
+   padding-top: 20px;
+   margin-left: -5px;
+}
+.footer-left-icon-small .hi-icon{
+   padding-top: 5px;
 }
 
 /*///////////////////////// BUTTONS /////////////////////////*/
