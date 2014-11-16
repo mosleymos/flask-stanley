@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
 
     <!-- Stanley theme -->
-    <link rel="stylesheet" href="public/stylesheets/stanley.css">
+    <link rel="stylesheet" href="static/css/stanley.css">
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>   
@@ -17,10 +17,11 @@
 
     </head>
     <body>
-    <div class="container">
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>    <div class="container">
 <!--         <div class="row">
  -->            <div class="leftColumn">
-                <img src="public/images/StanleyTransparent.png" alt="Stanley" height="auto" width="200px" />
+                <img src="static/img/StanleyTransparent.png" alt="Stanley" height="auto" width="200px" />
                 
                 <h2>TELL ME ABOUT YOUR MOVIE !</h2>
                 <!--
@@ -42,19 +43,33 @@
                 <h4>Contact</h4>
             </div>
             <div class="rightColumn">
+                <div class="container">
                 <center>
                 <form class="navbar-form navbar-left" role="search">
                     <div class="form-group">
-                        <textarea class="textInput" rows="4" cols="50" placeholder="Write the synopsis of your movie, for example : Once upon a time there was a very pretty and young princess, wanted to marry the prince of her dreams...">
-                        </textarea>
 
+                        <label for="textInput">Write the synopsis of your movie : </label>
+                        <textarea placeholder= "Once upon a time there was a very pretty and young princess, wanted to marry the prince of her dreams, blablabla..." id="textInput" maxlength="400"></textarea>
+                        <p id="myCounter">Characters left: 400</p>
                     </div>
                     <a href="stanley_is_working.html"><button type="button" class = "btn-group">Generate Trailer</button></a>
                 </form>
             </center>
              </div>
+             </div>
 
 <!--         </div>
  -->    </div>
+     
+        <script type="text/javascript">
+            $('#textInput').keydown(function () {
+                var left = 400 - $(this).val().length;
+                if (left < 0) {
+                    left = 0;
+                }
+                $('#myCounter').text('Characters left: ' + left);
+            });
+        </script>
+    
     </body>
 </html>

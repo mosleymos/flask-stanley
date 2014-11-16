@@ -64,23 +64,25 @@
 }
 /*///////////////////////// ROWS, COLUMNS  /////////////////////////*/
 .row{
+	background-color:#cc7231;
 
 }
 .leftColumn{
+  z-index : 2;
   float : left;
 	font-family:'GreyScaleBasicRegular';
 	position : fixed;
 	margin-left: -5px;
 	top: 0;
 	bottom: 0;
-	left: -5px;
+	left: 0px;
 	width: 35%;
 	max-width: 385px;
 	padding: 3rem 2rem 2rem ;
 	background-color:rgba(240, 177, 105, 0.85);
 }
 .leftColumn:hover{
-margin-left: 5px;
+margin-left: 0px;
 -webkit-transition: -webkit-transform 0.5s, margin-left 0.5s;
 	-moz-transition: -moz-transform 0.5s, margin-left 0.5s;
 	transition: transform 0.5s, margin-left 0.5s;
@@ -89,25 +91,40 @@ margin-left: 5px;
 margin-left: -5px;
 }
 .leftColumn:after{
-margin-left: -5px;
+margin-left: 0px;
 -webkit-transition: -webkit-transform 0.5s, margin-left 0.5s ease-in-out;
 	-moz-transition: -moz-transform 0.5s, margin-left 0.5s ease-in-out;
 	transition: transform 0.5s, margin-left 0.5s ease-in-out;
 
 }
-
-
-
 .rightColumn{
-  float : right;
+   z-index : 0;
+  float: right;
 	font-family:'GreyScaleBasicRegular';
 	position : fixed;
-	width: 65%;
+	width: 100%;
+  height:100%;
 	padding-left: 0;
 	max-width: 900;
-	padding-right: 1.5rem;
-  background-color:#dfd295;
+}
 
+.rightColumn .container{
+    width: 100%;
+  height:100%;
+  background-color:#dfd295;
+}
+.rightColumn .img{
+	opacity: 0.7;
+-webkit-transition: opacity 0.35s;
+transition: opacity 0.35s;
+max-width:100%;
+min-height:100%;
+}
+
+.rightColumn .container{
+    width: 100%;
+  height:100%;
+  background-color:#dfd295;
 }
 
 .sidebar {
@@ -198,35 +215,120 @@ margin-left: -5px;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-.hi-icon-contactus:before {
-	content: "\e600";
-}
-.hi-icon-contactus:hover{
-	text-decoration: none;
-}
+/* --- */
 .hi-icon-googleplus:before {
-	content: "\e601";
+	content: "\e60b";
 }
 .hi-icon-googleplus:hover{
 	text-decoration: none;
 }
+/* --- */
 .hi-icon-facebook:before {
-	content: "\e602";
+	content: "\e60c";
 }
 .hi-icon-facebook:hover{
 	text-decoration: none;
 }
+/* --- */
 .hi-icon-twitter:before {
-	content: "\e603";
+	content: "\e60d";
 }
 .hi-icon-twitter:hover{
 	text-decoration: none;
 }
+/* --- */
 .hi-icon-github:before {
-	content: "\e604";
+	content: "\e60e";
 }
 .hi-icon-github:hover{
 	text-decoration: none;
+}
+/* --- */
+.hi-icon-home:before {
+	content: "\e600";
+}
+.hi-icon-home:hover{
+	text-decoration: none;
+}
+/* --- */
+.hi-icon-undo:before {
+	content: "\e601";
+}
+.hi-icon-undo:hover{
+	text-decoration: none;
+}
+/* --- */
+.hi-icon-expand:before {
+	content: "\e602";
+}
+.hi-icon-expand:hover{
+	text-decoration: none;
+}
+/* --- */
+.hi-icon-contract:before {
+	content: "\e603";
+}
+.hi-icon-contract:hover{
+	text-decoration: none;
+}
+/* --- */
+.hi-icon-wink:before {
+	content: "\e604";
+}
+.hi-icon-wink:hover{
+	text-decoration: none;
+}
+/* --- */
+.hi-icon-play:before {
+	content: "\e605";
+}
+.hi-icon-play:hover{
+	text-decoration: none;
+}
+/* --- */
+.hi-icon-pause:before {
+	content: "\e606";
+}
+.hi-icon-pause:hover{
+	text-decoration: none;
+}
+/* --- */
+.hi-icon-stop:before {
+	content: "\e607";
+}
+.hi-icon-stop:hover{
+	text-decoration: none;
+}
+/* --- */
+.hi-icon-arrow-right:before {
+	content: "\e608";
+}
+.hi-icon-arrow-right:hover{
+	text-decoration: none;
+}
+/* --- */
+.hi-icon-arrow-left:before {
+	content: "\e609";
+}
+.hi-icon-arrow-left:hover{
+	text-decoration: none;
+}
+/* --- */
+.hi-icon-mail:before {
+	content: "\e60a";
+}
+.hi-icon-mail:hover{
+	text-decoration: none;
+}
+.stanley-please{
+	text-align: center;
+	padding-left: 12%;
+	padding-top: 22%;
+	width:100%;
+}
+.stanley-title{
+padding-top: 25%;
+
 }
 /*///////////////////////// BUTTON EFFECT /////////////////////////*/
 
@@ -288,7 +390,6 @@ h1{
 h1 span{
 	font-family: 'GreyScaleBasicBold';
 	font-size: 30px;
-	text-decoration:underline;
 }
 h2{
 		font-family: 'GreyScaleBasicRegular';
@@ -316,13 +417,34 @@ p span{
 
 }
 
-.textInput {
+#textInput {
+  display : block;
+  position:absolute;
+  font-size:28px;
+  clear : both;
+  width: 60%;
+  height: 30%;
+  margin-left : 10%;
+  margin-top : 5%;
+  resize: none;
+}
+
+label {
+  display : block;
   position:absolute;
   clear : both;
-  width: 30%;
-  height: 30%;
-  margin-right : -20%;
-  margin-top : 5%;
+  font-size:36px;
+  margin-left : 10%;
+  margin-top : 2%;
+}
+
+#myCounter {
+  display : block;
+  position:absolute;
+  clear : both;
+  font-size:20px;
+  margin-left : 10%;
+  margin-top : 20%;
 }
 /*///////////////////////// BACKGROUND IMAGE /////////////////////////*/
 img.bg {
