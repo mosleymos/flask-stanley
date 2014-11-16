@@ -486,6 +486,7 @@ p span{
 }
 
 #textInput {
+
   display : block;
   position:absolute;
   font-size:28px;
@@ -498,21 +499,27 @@ p span{
 }
 
 label {
-  display : block;
-  position:absolute;
-  clear : both;
-  font-size:36px;
-  margin-left : 10%;
-  margin-top : 2%;
+	font-family: 'GreyScaleBasicRegular';
+	color: #FFFFFF;
+	font-size: 23px;	
+  	display : block;
+  	position:absolute;
+  	clear : both;
+  	margin-left : 10%;
+  	margin-top : 2%;
+  	text-align: center;
 }
 
 #myCounter {
+	font-family: 'GreyScaleBasicRegular';
+		color: #FFFFFF;
+        font-size:13px;
+        padding: 0.5em 1% 0;
   display : block;
   position:absolute;
   clear : both;
-  font-size:20px;
   margin-left : 10%;
-  margin-top : 20%;
+  margin-top : 19%;
 }
 /*///////////////////////// BACKGROUND IMAGE /////////////////////////*/
 img.bg {
