@@ -34,3 +34,21 @@ Old project from an hackathon about IBM Bluemix service
 - [] Essai pour marche
 - [] Separer du front et back
 - [] pylint et autres outils pour gestion code
+
+## Development notes
+
+Utilisation de pipenv - Gestion des dépendances python ...
+Pour l'usage de pipenv il faut préalablement installer pip
+Pour installation simple
+
+```
+pip install --user pipenv
+```
+
+Soit pour lancer les informations
+
+```
+$ pipenv shell
+$ pipenv run python hello.py
+
+```
