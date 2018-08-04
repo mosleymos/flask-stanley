@@ -12,18 +12,15 @@ import urllib
 from flask import Flask
 from flask import render_template
 
-app = Flask(__name__)
-
-#-------------------------------------------------------------------------------
-#@app.route('/')
-#def hello():
-#	return "Hello World"
-
 
 API_KEY = os.getenv('API_KEY', '')
 YOUTUBE_API_SERVICE_NAME = os.getenv('YOUTUBE_API_SERVICE_NAME', 'youtube')
 YOUTUBE_API_VERSION = os.getenv('YOUTUBE_API_VERSION' , "v3")
 QUERY_TERM = os.getenv('QUERY_TERM',"young princess" )
+
+
+app = Flask(__name__)
+
 
 @app.route('/')
 @app.route('/index')
