@@ -22,7 +22,7 @@ app = Flask(__name__)
 #	return "Hello World"
 
 
-API_KEY = "AIzaSyBdDDnfLMXZ_z43CYWiDpuDteqOiNiHNa8" 
+API_KEY = "AIzaSyBdDDnfLMXZ_z43CYWiDpuDteqOiNiHNa8"
 YOUTUBE_API_SERVICE_NAME = "youtube"
 YOUTUBE_API_VERSION = "v3"
 QUERY_TERM = "young princess"     ### Search youtube for these ..... and create a playlist
@@ -56,16 +56,12 @@ def your_trailer():
 
 
 def search_by_keyword( input_text):
-	
-	input_blob = TextBlob (input_text)
-	search_terms = input_blob.noun_phrases
 
-    youtube = build(
-      YOUTUBE_API_SERVICE_NAME, 
-      YOUTUBE_API_VERSION, 
-      developerKey=API_KEY
-    )
-    
+    input_blob = TextBlob (input_text)
+    search_terms = input_blob.noun_phrases
+
+    youtube = build( YOUTUBE_API_SERVICE_NAME, YOUTUBE_API_VERSION, developerKey=API_KEY)
+
     videos = []
     for line in search_terms:
         print line
@@ -74,14 +70,14 @@ def search_by_keyword( input_text):
           part="id,snippet",
           maxResults=10
         ).execute()
-        
+
         link= "https://www.youtube.com/watch?v="
 
         for search_result in search_response.get("items", []):
             if search_result["id"]["kind"] == "youtube#video":
                 full_link = link+search_result["id"]["videoId"]
                 videos.append(full_link)
-            
+
     return videos
 
 
