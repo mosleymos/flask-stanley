@@ -9,8 +9,6 @@ import os
 import urllib
 
 
-
-
 from flask import Flask
 from flask import render_template
 
@@ -22,18 +20,14 @@ app = Flask(__name__)
 #	return "Hello World"
 
 
-API_KEY = "AIzaSyBdDDnfLMXZ_z43CYWiDpuDteqOiNiHNa8"
-YOUTUBE_API_SERVICE_NAME = "youtube"
-YOUTUBE_API_VERSION = "v3"
-QUERY_TERM = "young princess"     ### Search youtube for these ..... and create a playlist
-videos_links = []
-
-
+API_KEY = os.getenv('API_KEY', '')
+YOUTUBE_API_SERVICE_NAME = os.getenv('YOUTUBE_API_SERVICE_NAME', 'youtube')
+YOUTUBE_API_VERSION = os.getenv('YOUTUBE_API_VERSION' , "v3")
+QUERY_TERM = os.getenv('QUERY_TERM',"young princess" )
 
 @app.route('/')
 @app.route('/index')
 def index():
-
     return render_template('pages/index.html')
 
 
@@ -51,11 +45,10 @@ def your_trailer():
     return render_template('pages/your_trailer.html')
 
 
-
 ###################### ----------------------------------------------########################
 
 
-def search_by_keyword( input_text):
+def search_by_keyword(input_text):
 
     input_blob = TextBlob (input_text)
     search_terms = input_blob.noun_phrases
