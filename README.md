@@ -27,13 +27,13 @@ Old project from an hackathon about IBM Bluemix service
 
 ## Todolist
 
-- [] Remettre version python a jour
-- [] Gestion dépendances
-- [] Dockerize ?
-- [] Proto simple pour marche
-- [] Essai pour marche
-- [] Separer du front et back
-- [] pylint et autres outils pour gestion code
+- [ ] Remettre version python a jour
+- [ ] Gestion dépendances
+- [ ] Dockerize ?
+- [ ] Proto simple pour marche
+- [ ] Essai pour marche
+- [ ] Separer du front et back
+- [ ] pylint et autres outils pour gestion code
 
 ## Development notes
 
